@@ -1,6 +1,6 @@
 import Books from "@views/Books/BooksContainer";
 import Categories from "@views/Categories/CategoriesContainer";
-import Fallback from "@views/Fallback";
+import Fallback from "@views/Fallback/FallbackContainer";
 import Welcome from "@views/Welcome/WelcomeContainer";
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
