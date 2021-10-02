@@ -4,7 +4,7 @@ const initState = {
   loading: false,
   data: [],
   currentPage: 1,
-  pageSize: 5,
+  pageSize: 6,
   hasNext: true,
 };
 

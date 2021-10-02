@@ -21,7 +21,7 @@ const BooksComponent = (props) => {
       {data?.length > 0 && (
         <>
           {data?.map?.((e) => (
-            <Grid item xs={4} key={e?.isbn}>
+            <Grid item xs={6} md={4} key={e?.isbn}>
               <Card
                 name={e?.name}
                 isbn={e?.isbn}

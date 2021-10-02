@@ -5,15 +5,17 @@ import book from "@assets/img/book.png";
 import { pxToRem } from "@theme/theme";
 
 const useStyles = makeStyles((theme) => ({
-  root: { padding: pxToRem(20) },
+  root: { padding: pxToRem(20), height: "100%" },
   mainContainer: {
     flexWrap: "nowrap",
     justifyContent: "center",
+    height: "100%",
     alignItems: "center",
     padding: pxToRem(30),
     color: "darkgoldenrod",
     background: theme.palette.primary.light,
     borderRadius: pxToRem(10),
+    border: `${pxToRem(5)} solid ${theme.palette.primary.main}`,
     "&:hover": {
       color: theme.palette.primary.light,
       background: "darkgoldenrod",
@@ -44,25 +46,25 @@ const Card = (props) => {
         <Grid item container className={classes.subContainer}>
           {name?.trim?.()?.length > 0 && (
             <Grid item className={classes.contentContainer}>
-              <Typography variant="h5">Name:</Typography>{" "}
+              <Typography variant="h5">Name:</Typography>&nbsp;
               <Typography variant="h5">{name}</Typography>
             </Grid>
           )}
           {isbn?.trim?.()?.length > 0 && (
             <Grid item className={classes.contentContainer}>
-              <Typography variant="h5">ISBN:</Typography>{" "}
+              <Typography variant="h5">ISBN:</Typography>&nbsp;
               <Typography variant="h5">{isbn}</Typography>
             </Grid>
           )}
           {authors?.length > 0 && (
             <Grid item className={classes.contentContainer}>
-              <Typography variant="h5">Authors:</Typography>{" "}
+              <Typography variant="h5">Authors:</Typography>&nbsp;
               <Typography variant="h5">{authors?.join?.(", ")}</Typography>
             </Grid>
           )}
           {released?.trim?.()?.length > 0 && (
             <Grid item className={classes.contentContainer}>
-              <Typography variant="h5">Released:</Typography>{" "}
+              <Typography variant="h5">Released:</Typography>&nbsp;
               <Typography variant="h5">{released?.split?.("T")[0]}</Typography>
             </Grid>
           )}
