@@ -1,0 +1,57 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "arrow-body-style": ["error", "as-needed"],
+    "no-console": ["warn", { "allow": ["error"] }],
+    "max-len": "off",
+    "newline-per-chained-call": "off",
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "prefer-template": "error",
+    "import/no-extraneous-dependencies": "off",
+    "react/forbid-prop-types": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["@views", "./src/views"],
+          ["@routes", "./src/routes"],
+          ["@theme", "./src/theme"],
+          ["@store", "./src/store"],
+          ["@reducers", "./src/reducers"],
+          ["@assets", "./src/assets"],
+          ["@sagas", "./src/sagas"],
+          ["@actions", "./src/actions"],
+          ["@constants", "./src/constants"],
+          ["@common", "./src/common"],
+          ["@services", "./src/services"]
+        ]
+      }
+    },
+    "node": {
+      "moduleDirectory": ["node_modules", "src/"]
+    }
+  }
+}
